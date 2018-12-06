@@ -2,44 +2,85 @@
 <html>
 <head>
 	<title>
-  网上订购系统
+		网上订购系统
 	</title>
-  <link rel="stylesheet" href="../layui/css/layui.css" >
-    <script src="../layui/layui.all.js"></script>
+	<link rel="stylesheet" href="../layui/css/layui.css" >
+	<link rel="stylesheet" href="../css/index.css" >
+	<script src="../layui/layui.all.js"></script>
 </head>
-<body class="layui-bg-blue">
-<ul   class="layui-nav layui-bg-cyan">
- <li class="layui-nav-item"><a href="">最新活动</a></li>
-  <li class="layui-nav-item layui-this"><a href="">产品</a></li>
-  <li class="layui-nav-item"><a href="">大数据</a></li>
-  <li class="layui-nav-item">
-    <a href="javascript:;">解决方案</a>
-    <dl class="layui-nav-child"> <!-- 二级菜单 -->
-      <dd><a href="">移动模块</a></dd>
-      <dd><a href="">后台模版</a></dd>
-      <dd><a href="">电商平台</a></dd>
-    </dl>
-  </li>
-  <li class="layui-nav-item"><a href="">社区</a></li>
-<div style="float: right">
-  <li  class="layui-nav-item">
-    <a href="">控制台<span class="layui-badge">1</span></a>
-  </li>
-  <li class="layui-nav-item">
-    <a href="">个人中心<span class="layui-badge-dot"></span></a>
-  </li>
-  <li class="layui-nav-item">
-  <!-- 下面头像图片的位置应该是从数据库里得到  后面要改 -->
+<body class="layui-bg-">
+	<ul   class="layui-nav layui-bg-cyan">
+		<li class="layui-nav-item"><a href="">最新产品</a></li>
+		<li class="layui-nav-item layui-this"><a href="">产品大全</a></li>
+		<li class="layui-nav-item"><a href="">大数据</a></li>
+		<li class="layui-nav-item">
+			<a href="javascript:;">解决方案</a>
+			<dl class="layui-nav-child"> <!-- 二级菜单 -->
+				<dd><a href="">移动模块</a></dd>
+				<dd><a href="">后台模版</a></dd>
+				<dd><a href="">电商平台</a></dd>
+			</dl>
+		</li>
+		<li class="layui-nav-item"><a href="">社区</a></li>
+		<div style="float: right">
+			<li  class="layui-nav-item">
+				<a href="">购物车<span class="layui-badge">1</span></a>
+			</li>
+			<li class="layui-nav-item">
+				<a href="">个人中心<span class="layui-badge-dot"></span></a>
+			</li>
+			<li class="layui-nav-item">
+				<!-- 下面头像图片的位置应该是从数据库里得到  后面要改 -->
 
-    <a href=""><img src="../picture/tyloo.jpg" class="layui-nav-img">我</a>  
-    <dl class="layui-nav-child">
-      <dd><a href="javascript:;">修改信息</a></dd>
-      <dd><a href="javascript:;">安全管理</a></dd>
-      <dd><a href="javascript:;">退了</a></dd>
-    </dl>
-  </li>
+				<a href=""><img src="../picture/tyloo.jpg" class="layui-nav-img">我</a>  <!-- 这里的“我”如果用户未登录时，应该是登陆两个字，如果已经登录应该是用户名，后面需要改，从数据的调数据 -->
+				<dl class="layui-nav-child">
+					<dd><a href="javascript:;">修改信息</a></dd>
+					<dd><a href="javascript:;">安全管理</a></dd>
+					<dd><a href="javascript:;">退了</a></dd>
+				</dl>
+			</li>
+		</div>
+	</ul>
+	<div class=" header">
+		
+
+		<div class="shoplogo">
+			<a href="#" title="网上订购系统">	
+				<img class=" " src="../picture/webshop.png" alt="网上订购系统">
+			</a>
+		</div>
+
+		<div class="dis-in">
+			<form action class="layui-form ">
+				<input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input shopsearch" placeholder="请输入需要的商品">
+				
+				<button type="submit" class="layui-btn icon" style="background-color: #2F4056" >
+					<i class="layui-icon layui-icon-search"></i> 
+				</button>
+				
+			</form>
+		</div>
+	</div>
+
+		<div class="newmall-logo">
+			<a href="#" title="最新产品">	
+				<img  src="../picture/newmall.png" alt="最新产品">
+			</a>
+		</div>
+		<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+  <legend>填充轮播元素 - 以图片为例</legend>
+</fieldset>    
+<div class="layui-carousel" id="test10">
+  <div carousel-item="">
+    <div><img src="//res.layui.com/images/layui/demo/1.png"></div>
+    <div><img src="//res.layui.com/images/layui/demo/2.png"></div>
+    <div><img src="//res.layui.com/images/layui/demo/3.png"></div>
+    <div><img src="//res.layui.com/images/layui/demo/4.png"></div>
+    <div><img src="//res.layui.com/images/layui/demo/5.png"></div>
+    <div><img src="//res.layui.com/images/layui/demo/6.png"></div>
+    <div><img src="//res.layui.com/images/layui/demo/7.png"></div>
   </div>
-</ul>
+</div>
 
 </body>
 </html>
