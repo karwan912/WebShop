@@ -1,0 +1,11 @@
+
+/**index.html.header**/
+.header{box-shadow: 5px 1px 5px #2F4056;height:130px;background:#fff;}
+.shoplogo{width:450px;height:66px; display:inline-block;position:relative; top:25px; left:150px;}
+.shopsearch{ width:350px;height:40px; ;display:inline-block;position:relative;top:35px;left:550px;}
+.icon{height:40px; display:inline-block;position:relative; top:35px;left:545px;}
+.dis-in{display:inline-block;}
+
+
+/**最新产品**/
+.newmall-logo{height: 35px;width: 120px;position: relative;top:15px;left:25px;}
