@@ -7,21 +7,16 @@
 	<link rel="stylesheet" href="../layui/css/layui.css" >
 	<link rel="stylesheet" href="../css/index.css" >
 	<script src="../layui/layui.all.js"></script>
+	<script src="../layui/layui.js"></script>
 </head>
 <body class="layui-bg-">
 	<ul   class="layui-nav layui-bg-cyan">
-		<li class="layui-nav-item"><a href="">最新产品</a></li>
-		<li class="layui-nav-item layui-this"><a href="">产品大全</a></li>
+		<li class="layui-nav-item layui-this"><a href="">首页</a></li>
+		<li class="layui-nav-item"><a href="">产品大全</a></li>
+		<li class="layui-nav-item "><a href="">最新产品</a></li>
 		<li class="layui-nav-item"><a href="">大数据</a></li>
-		<li class="layui-nav-item">
-			<a href="javascript:;">解决方案</a>
-			<dl class="layui-nav-child"> <!-- 二级菜单 -->
-				<dd><a href="">移动模块</a></dd>
-				<dd><a href="">后台模版</a></dd>
-				<dd><a href="">电商平台</a></dd>
-			</dl>
-		</li>
-		<li class="layui-nav-item"><a href="">社区</a></li>
+		<li class="layui-nav-item"><a href="javascript:;">社区</a></li>
+		<li class="layui-nav-item"><a href="">关于我们</a></li>
 		<div style="float: right">
 			<li  class="layui-nav-item">
 				<a href="">购物车<span class="layui-badge">1</span></a>
@@ -33,11 +28,7 @@
 				<!-- 下面头像图片的位置应该是从数据库里得到  后面要改 -->
 
 				<a href=""><img src="../picture/tyloo.jpg" class="layui-nav-img">我</a>  <!-- 这里的“我”如果用户未登录时，应该是登陆两个字，如果已经登录应该是用户名，后面需要改，从数据的调数据 -->
-				<dl class="layui-nav-child">
-					<dd><a href="javascript:;">修改信息</a></dd>
-					<dd><a href="javascript:;">安全管理</a></dd>
-					<dd><a href="javascript:;">退了</a></dd>
-				</dl>
+				
 			</li>
 		</div>
 	</ul>
@@ -61,26 +52,189 @@
 			</form>
 		</div>
 	</div>
+	<div class="base-bg">
+		<div class="base-cont">
+			<div class="allmall-logo">
+				<a href="#" title="产品分类">	
+					<img  src="../picture/allmall.png" alt="产品分类">
+				</a>
+			</div>
 
-		<div class="newmall-logo">
-			<a href="#" title="最新产品">	
-				<img  src="../picture/newmall.png" alt="最新产品">
+			<div class="bg">
+
+				<ul class="allmall-box   layui-clear">
+					<li class="li-style">
+						<div class="title">奶粉辅食</div>
+						<p class="p-style">
+							<a href="#">奶粉</a>
+							<a href="#">捕食</a>
+							<a href="#">营养品</a>
+						</p>
+						<i class="layui-icon layui-icon-right icon-style"></i>
+					</li>
+					<li class="li-style">
+						<div class="title">纸尿裤</div>
+						<p class="p-style">
+							<a href="#">纸尿裤</a>
+							<a href="#">婴儿湿巾</a>
+
+						</p>
+						<i class="layui-icon layui-icon-right icon-style"></i>
+					</li>
+					<li class="li-style">
+						<div class="title">洗护用品</div>
+						<p class="p-style">
+							<a href="#">母婴洗护用品</a>
+							<a href="#">孕婴洗护用品</a>
+
+						</p>
+						<i class="layui-icon layui-icon-right icon-style"></i>
+					</li>
+					<li class="li-style">
+						<div class="title">儿童玩具</div>
+						<p class="p-style">
+							<a href="#">婴幼玩具</a>
+							<a href="#">遥控玩具</a>
+							<a href="#">积木拼插</a>
+						</p>
+						<i class="layui-icon layui-icon-right icon-style"></i>
+					</li>
+					<li class="li-style">
+						<div class="title">车窗座椅</div>
+						<p class="p-style">
+							<a href="#">婴儿推车</a>
+							<a href="#">儿童安全座椅</a>
+
+						</p>
+						<i class="layui-icon layui-icon-right icon-style"></i>
+					</li>
+					<li class="li-style">
+						<div class="title">儿童童鞋</div>
+						<p class="p-style">
+							<a href="#">童装</a>
+							<a href="#">童鞋</a>
+							<a href="#">婴童内衣及饰品</a>
+						</p>
+						<i class="layui-icon layui-icon-right icon-style"></i>
+					</li>
+					<li class="li-style">
+						<div class="title">儿童图片</div>
+						<p class="p-style">
+							<a href="#">dd0-2岁</a>
+							<a href="#">早教启蒙</a>
+							<a href="#">孕产育儿</a>
+						</p>
+						<i class="layui-icon layui-icon-right icon-style"></i>
+					</li>
+					<li class="li-style">
+						<div class="title">孕妈专区</div>
+						<p class="p-style">
+							<a href="#">孕妇装</a>
+							<a href="#">背婴带</a>
+							<a href="#">母婴服务</a>
+						</p>
+						<i class="layui-icon layui-icon-right icon-style"></i>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="newmall-logo">
+		<a href="#" title="最新产品">	
+			<img  src="../picture/newmall.png" alt="最新产品">
+		</a>
+	</div>
+
+	<div class="layui-carousel img-box " id="imgbox">
+		<div carousel-item="">
+			<div><img class="box-img-size" src="../picture/1.jpg"></div>
+			<div><img class="box-img-size" src="../picture/2.jpg"></div>
+			<div><img class="box-img-size" src="../picture/3.jpg"></div>
+			<div><img class="box-img-size" src="../picture/4.jpg"></div>
+			<div><img class="box-img-size" src="../picture/5.jpg"></div>
+			<div><img class="box-img-size" src="../picture/6.jpg"></div>
+			<div><img class="box-img-size" src="../picture/7.jpg"></div>
+		</div>
+	</div>
+
+
+	<div class="bigdata-base">
+		<div class="allmall-logo">
+			<a href="#" title="大数据">	
+				<img  src="../picture/bigdata.png" alt="大数据">
 			</a>
 		</div>
-		<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
-  <legend>填充轮播元素 - 以图片为例</legend>
-</fieldset>    
-<div class="layui-carousel" id="test10">
-  <div carousel-item="">
-    <div><img src="//res.layui.com/images/layui/demo/1.png"></div>
-    <div><img src="//res.layui.com/images/layui/demo/2.png"></div>
-    <div><img src="//res.layui.com/images/layui/demo/3.png"></div>
-    <div><img src="//res.layui.com/images/layui/demo/4.png"></div>
-    <div><img src="//res.layui.com/images/layui/demo/5.png"></div>
-    <div><img src="//res.layui.com/images/layui/demo/6.png"></div>
-    <div><img src="//res.layui.com/images/layui/demo/7.png"></div>
-  </div>
-</div>
+
+		<img class="bigdatastyle" src="../picture/bigdata-temp.jpg">
+
+	</div>
+	<div class="comm-base">
+
+		<div class="comm-logo">
+			<a href="#" title="社区">	
+				<img  src="../picture/community.png" alt="社区">
+			</a>
+		</div>
+
+		<img class="commstyle" src="../picture/comm-temp.jpg">
+	</div>
+
+
+	<div class="about-base">
+		<div class="about-logo">
+			<a href="#" title="关于我们">	
+				<img  src="../picture/about.png" alt="关于我们">
+			</a>
+		</div>
+	</div>
+
+	<div class="bottom-base">
+		<div class="bottom-promis">
+			<a class="bottom-text"><img class="buttom-icon" src="../picture/icon1.png"> 7天无理由退换货</a>	
+			<a class="bottom-text"><img class="buttom-icon" src="../picture/icon2.png"> 满99元全场免邮</a>
+			<a class="bottom-text"><img class="buttom-icon" src="../picture/icon3.png"> 100%品质保证</a>		
+		</div>
+		<hr class="bottom-hr"></hr>
+		<div>
+		<p>
+		<a class="buttom-help">关于我们</a>
+		<span class="buttom-help">|</span>
+		<a class="buttom-help">帮助中心</a>
+		<span class="buttom-help">|</span>
+		<a class="buttom-help">售后服务</a>
+		<span class="buttom-help">|</span>
+		<a class="buttom-help">产品咨询</a>
+		<span class="buttom-help">|</span>
+		<a class="buttom-help">关于货源</a>
+		</p>
+
+		<p class="buttom-cpy">
+		Copyright © 2019-2029 www.AlimjanYasin.com 版权所有
+		</p>
+		<p class="buttom-cpy"><a class="buttom-text" href="http://www.miitbeian.gov.cn">备案号:粤ICP备17136265号-1</a></p>
+		</div>
+
+	</div>
+
+	<script>
+		layui.use('carousel', function(){
+			var carousel = layui.carousel;
+  //建造实例
+  carousel.render({
+  	elem: '#imgbox'
+    ,width: '600px' //设置容器宽度
+    ,height:'400px'
+    ,arrow: 'always' //始终显示箭头
+    ,anim: 'fade' //切换动画方式
+    ,interval:4000 //  切换时间
+
+});
+});
+
+</script>
+
+
 
 </body>
 </html>
