@@ -1,0 +1,48 @@
+/***** 商品分类******/
+body{margin: 0 0;padding: 0 0;}
+
+.img-bg{background-size: 100%;background:url(../img/img-web/login-bg.jpg) repeat; max-width: 100%;  height: auto;}
+
+.title{font-weight:bold;font-size: 17px; text-align: center; margin:  -0.25rem 0;}
+.li-style{list-style: none;margin: -1rem -1rem;}
+.a-style{font-size: 16px; text-align: left; margin: -0.25rem  0.25rem; color:#c2c2c2}
+.hr-style{margin:  -1rem 0;}
+.mallcontain{margin: 4rem 0; height: 15rem;}
+
+
+/****滚动*****/
+
+.img-web-1{margin: 2rem 0; height: 280px;}
+.img-gundong{margin: 2rem 0;}
+/******热销推荐********/
+
+.card-img-my{height: 8rem}
+.card-title-my{font-size: 22px;}
+.card-text-my{font-size: 14px;}
+/****bg color*******/
+
+.text-style-my{font-size: 24px; margin: 30px 0; color:#e2e2e2;}
+.icon-my{font-size: 32px;}
+.icon-my2{font-size: 22px;}
+.a-style-my{text-decoration: none ; color :#1E9FFF;}
+.text-style-my2{font-size: 14px;color:#888888; margin: 1rem 0; }  
+.a-style-my2{color:#1E9FFF; text-decoration: none ;}
+
+
+a:link {color: #1E9FFF; text-decoration:none;} /***未访问：蓝色、无下划线  */
+a:active:{color: #1E9FFF; } /*激活：红色 */  
+a:visited {color:#e2e2e2;text-decoration:none;} /*已访问：purple、无下划线 */  
+a:hover {color: #1E9FFF; text-decoration:none;} /*鼠标移近：红色、下划线 */ 
+
+
+
+/*****login 页********/
+.img-bg-login{background-size: 100%;background:url(../img/img-web/login-bg.jpg); max-width: 100%;  height: auto;}
+.login-box-style-my{margin: 10rem auto;}
+
+
+/*******registered**********/
+.img-bg-regis{background-size: 100%;background:url(../img/img-web/login-bg.jpg); max-width: 100%;  height: auto;}
+
+/******allmall*****/
+.allmall-con{margin: 5rem 0;}
