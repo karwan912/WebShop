@@ -1,0 +1,252 @@
+
+			/*******/  直接从webconfig文件里配置数据库信息，可以更好的维护
+
+		string mysqlstr = System.Configuration.ConfigurationManager.ConnectionStrings["SqlConnStr"].ConnectionString;
+        OleDbConnection conn = new OleDbConnection(mysqlstr);
+        OleDbCommand cmd;
+        OleDbDataReader datar;
+
+
+		///  连接数据库并 打印某个字段
+
+        OleDbConnection conn = new OleDbConnection("provider=SQLOLEDB;Data Source=39.108.52.38,1433;Network Library=DBMSSOCN;Initial Catalog=WebShop;User ID=sa;Password=912223;");
+        OleDbCommand cmd;
+        OleDbDataReader datar;
+        string sqlstr = "select * from UserList";
+        conn.Open();
+        cmd = new OleDbCommand(sqlstr,conn);
+        datar = cmd.ExecuteReader();
+        while(datar.Read()){
+            alim.InnerText += datar["Username"].ToString();
+        }
+        datar.Close();
+        conn.Close();
+	
+
+	//  插入数据到数据库
+
+		string usid2 = Request["usid"];
+        string usnm2 = Request["usnm"];
+        string uspt2 = Request["uspt"];
+        string lgps2 = Request["lgps"];
+        string pyps2 = Request["pyps"];
+        string usadd2 = Request["usadd"];
+        string usemail2 = Request["usemail"];
+        string insertsql = "insert into Userlist values('" + usid2 + "','" + usnm2 + "','" + uspt2 + "','" + lgps2 + "','" + pyps2 + "','" + usadd2 + "','" + usemail2 + "')";
+        conn.Open();
+        cmd = new OleDbCommand(insertsql, conn);
+        try { 
+        int i = cmd.ExecuteNonQuery();
+        if (i > 0)
+        {
+            Response.Write("添加成功");
+        }
+        else { Response.Write("失败"); }
+            }catch( Exception ex){
+                Response.Write("添加失败");
+            }
+       
+        conn.Close();
+
+
+		//  修改数据
+
+
+
+
+		<p>用户id  <input type="text" name="usid"   /></p> 
+        <p>用户名<input type="text" name="usnm"  /></p> 
+        <p>用户头象个<input type="text" name="uspt" /></p> 
+        <p>登陆密码<input type="password" name="lgps"  /></p> 
+        <p>支付密码<input type="password" name="pyps" /></p> 
+        <p>地址<input type="text" name="usadd"/></p> 
+        <p>邮箱<input type="text" name="usemail"  /></p> 
+
+
+		//修改数据库字段
+		 string sqlstr = "update userlist set userid='"+usid2+"',username='"+usnm2+"',userportrait='"+uspt2+"',loginpass='"+lgps2+"',paypass='"+pyps2+"',useremail='"+usemail2+"',address='"+usadd2+"' where userid='222'";
+
+
+
+
+		 //  用户头像用相对地址保存在数据库
+		  OleDbConnection conn = new OleDbConnection("provider=SQLOLEDB;Data Source=39.108.52.38,1433;Network Library=DBMSSOCN;Initial Catalog=WebShop;User ID=sa;Password=912223;");
+        OleDbCommand cmd;
+        OleDbDataReader datar;
+
+        if (FileUpload1.HasFile)
+        {
+            string Fname = FileUpload1.FileName;
+            //限制用户上传的头像的类型
+            string LastName = Fname.Substring(Fname.LastIndexOf(".") + 1);
+            if (LastName.ToLower() == "jpg" || LastName.ToLower() == "png" || LastName.ToLower() == "bmp" || LastName.ToLower() == "jpeg" || LastName.ToLower() == "gif")
+            {
+
+                // rootadr  用户头像的保存在数据库的位置
+                string rootadr = Server.MapPath("/img/");
+                if (!System.IO.Directory.Exists(rootadr))
+                {
+                    System.IO.Directory.CreateDirectory(rootadr);
+                }
+                // RLTADDR  Relative address  相对位置
+                string RLTADDR = "\\img\\" + FileUpload1.FileName;
+
+                FileUpload1.SaveAs(rootadr + Fname);
+                string sqlstr = "update userlist set userportrait='" + RLTADDR + "' where userid='2'";
+                conn.Open();
+                cmd = new OleDbCommand(sqlstr, conn);
+                try
+                {
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0)
+                    {
+                        Response.Write("添加成功");
+                    }
+                    else { Response.Write("失败"); }
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("异常错误");
+                }
+
+                conn.Close();
+                Response.Write(RLTADDR);
+            }
+            else
+            {
+                RegisterStartupScript("false", "<script>alert('请上传，jpg | png| gif  类型的图片')</script>");
+            }
+
+        }
+
+			 //从数据库把保存的图片地址读取回来
+		OleDbConnection conn = new OleDbConnection("provider=SQLOLEDB;Data Source=39.108.52.38,1433;Network Library=DBMSSOCN;Initial Catalog=WebShop;User ID=sa;Password=912223;");
+        OleDbCommand cmd;
+        OleDbDataReader datar;
+        string readimg = " select UserPortrait from userlist where userid='1' ";
+        conn.Open();
+        cmd = new OleDbCommand(readimg, conn);
+        datar = cmd.ExecuteReader();
+        while (datar.Read())
+        {
+         string url= datar["userportrait"].ToString();
+         Image1.ImageUrl = url.Trim();
+            
+
+        }
+        datar.Close();
+        conn.Close();
+
+
+
+		//  把密码 加密保存数据库  //request 
+		
+        Label1.Text = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(Request["text1"], "md5");
+
+		// cookie 
+		protected void Button1_Click(object sender, EventArgs e)
+    {
+        HttpCookie myck = new HttpCookie("name");
+        myck.Value = TextBox1.Text;
+        myck.Expires = DateTime.Now.AddHours(2);
+        Response.Cookies.Add(myck);
+
+    }
+    protected void Button2_Click(object sender ,EventArgs s) {
+        if (Request.Cookies["name"] != null) {
+            Label1.Text = Request.Cookies["name"].Value;
+
+        }
+    }
+    protected void Button3_Click(object sender,EventArgs s) {
+        Response.Cookies["name"].Expires = DateTime.MinValue;
+    }
+
+	//添加多值cookie
+	 protected void Button1_Click(object sender, EventArgs e)
+    {
+        HttpCookie myck = new HttpCookie("person");
+        myck.Values.Add("age","23");
+        myck.Values.Add("name",TextBox1.Text);
+        myck.Expires = DateTime.Now.AddHours(2);
+        Response.Cookies.Add(myck);
+
+    }
+    protected void Button2_Click(object sender ,EventArgs s) {
+        if (Request.Cookies["name"] != null) {
+
+            HttpCookie ck2 = Request.Cookies["person"];
+            Label1.Text = ck2.Values["name"] + "," + ck2.Values["age"] + "Ëê";
+
+        }
+    }
+    protected void Button3_Click(object sender,EventArgs s) {
+        Response.Cookies["person"].Expires = DateTime.MinValue;
+    }
+
+
+
+
+    /// css
+    html{font-size:62.5%;} 
+body{font-size:12px;font-size:1.2rem ;} 
+p{font-size:14px;font-size:1.4rem;}
+
+
+
+<link rel="stylesheet" type="text/css" href="../css/base.css">
+<script type="text/javascript" src="../js/flexible.min.js"></script>
+
+<div class="head ">
+    <ul class="layui-nav" lay-filter="">
+  <li class="layui-nav-item"><a href="">×îÐÂ»î¶¯</a></li>
+  <li class="layui-nav-item layui-this"><a href="">²úÆ·</a></li>
+  <li class="layui-nav-item"><a href="">´óÊý¾Ý</a></li>
+  <li class="layui-nav-item">
+    <a href="javascript:;">½â¾ö·½°¸</a>
+    <dl class="layui-nav-child"> <!-- ¶þ¼¶²Ëµ¥ -->
+      <dd><a href="">ÒÆ¶¯Ä£¿é</a></dd>
+      <dd><a href="">ºóÌ¨Ä£°æ</a></dd>
+      <dd><a href="">µçÉÌÆ½Ì¨</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item"><a href="">ÉçÇø</a></li>
+  
+  <li class="layui-nav-item float-right">
+    <a href=""><img src="../img/tyloo.jpg" class="layui-nav-img">ÎÒ</a>
+    <dl class="layui-nav-child">
+      <dd><a href="javascript:;">ÐÞ¸ÄÐÅÏ¢</a></dd>
+      <dd><a href="javascript:;">°²È«¹ÜÀí</a></dd>
+      <dd><a href="javascript:;">ÍËÁË</a></dd>
+    </dl>
+  </li> 
+  
+
+  <li class="layui-nav-item  float-right">
+    <a href="">¸öÈËÖÐÐÄ<span class="layui-badge-dot float-right"></span></a>
+  </li>
+ <li class="layui-nav-item   ">
+    <a href="">¿ØÖÆÌ¨<span class="layui-badge">9</span></a>
+  </li>
+</ul>
+
+<script>
+//×¢Òâ£ºµ¼º½ ÒÀÀµ element Ä£¿é£¬·ñÔòÎÞ·¨½øÐÐ¹¦ÄÜÐÔ²Ù×÷
+layui.use('element', function(){
+  var element = layui.element;
+  
+  //¡­
+});
+</script>
+    </div>
+
+
+
+    <div class="mallSearch dis-in">
+            <form action="" class="layui-form" novalidate>
+                <input type="text" name="title" required  lay-verify="required" autocomplete="off" class="layui-input " placeholder="ÇëÊäÈëÐèÒªµÄÉÌÆ·">
+                <button class="layui-btn dis-in " lay-submit lay-filter="formDemo">
+                    <i class="layui-icon layui-icon-search dis-in"></i>
+                </button>
+            </form>
+        </div>
