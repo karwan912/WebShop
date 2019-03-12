@@ -1,0 +1,16 @@
+a:link { text-decoration:none;} /***未访问：蓝色、无下划线  */
+a:active:{color: #1E9FFF; } /*激活：红色 */  
+a:visited {color:#e2e2e2;text-decoration:none;} /*已访问：purple、无下划线 */  
+a:hover {color: #1E9FFF; text-decoration:none;} /*鼠标移近：红色、下划线 */ 
+
+
+
+/****js 获得当前元素的id******/
+function changeimg(){
+	 document.onclick = function changeimg(e){
+                var target = e.target|| e.srcElement;
+               // alert(target.id);
+                document.getElementById("lgimg").src=document.getElementById(target.id).src;
+                
+            }
+}
