@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-	<title>Reste 登录页</title>
+	<title>购物车</title>
 
 	<!-- Bootstrap -->
 	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,18 +17,19 @@
 	<script src="../js/main.js"></script>
 	<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
 	<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-    <!--[if lt IE 9]>
-      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-  <![endif]-->
+	<!--[if lt IE 9]>
+	  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+	<![endif]-->
 </head>
 <body>
-	<div class="container-fluid">
-		
+
+<div class="container-fluid">
+
 		<div class="row">
 			<div class="col-md-12">
 				<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark fixed-top  ">
-					
+
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						<span class="navbar-toggler-icon"></span>
 					</button> <a class="navbar-brand" href="../html/index.html">Reste</a>
@@ -76,49 +77,169 @@
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-md-12 img-bg-login">
-				<div class="row">
-					<div class="col-md-6">
-					</div>
-					<div class="col-md-4 login-box-style-my">
-						<form role="form">
-							<div class="form-group">
-								
-								<label for="exampleInputEmail1">
-									邮箱
-								</label>
-								<input type="email" class="form-control" id="exampleInputEmail1" />
-							</div>
-							<div class="form-group">
-								
-								<label for="exampleInputPassword1">
-									密码
-								</label>
-								<input type="password" class="form-control" id="exampleInputPassword1" />
-							</div>
-							
-							<div class="checkbox">
-								
-								<label>
-									<input type="checkbox" /> 7天免密码登陆
-								</label>
-							</div> 
-							<button type="submit" class="btn btn-primary">
-								登陆
-							</button>
-						</form>
-						<p class="help-block">
-							<a class="a-style-my2 float-right" href="../html/registered.html">怎么？还没注册？点击注册一个</a>
-						</p>
-					</div>
-					<div class="col-md-2">
-					</div>
-				</div>
 
+
+		<div class="row boxcont">
+
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
 				
+					<table class="table">
+				<thead>
+					<tr>
+						<th>
+							循序
+						</th>
+						<th>
+							图片
+						</th>
+						<th>
+							产品
+						</th>
+						<th>
+							单价
+						</th>
+						<th>
+							数量
+						</th>
+						<th>
+							小计
+						</th>
+						<th>
+							操作
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							1
+						</td>
+						<td>
+							<img class=""  id=""  src="">
+						</td>
+						<td>
+							电视
+						</td>
+						<td>
+							99￥
+						</td>
+						<td>
+							<button type="button" class="btn btn-success btn-style" id=""><span class="iconfont  icon-zhankai icom-my3"></span></button>
+							<label class="" id="">1</label>
+							<button type="button" class="btn btn-success btn-style" id=""><span class="iconfont icon-zhankai1 icom-my3"></span></button>
+						</td>
+						<td>
+							
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr class="table-active">
+						<td>
+							1
+						</td>
+						<td>
+							<img class=""  id=""  src="">
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							01/04/2012
+						</td>
+						<td>
+							Approved
+						</td>
+						<td>
+							
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr class="table-success">
+						<td>
+							2
+						</td>
+						<td>
+							<img class=""  id=""  src="">
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							02/04/2012
+						</td>
+						<td>
+							Declined
+						</td>
+						<td>
+							
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr class="table-warning">
+						<td>
+							3
+						</td>
+						<td>
+							<img class=""  id=""  src="">
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							03/04/2012
+						</td>
+						<td>
+							Pending
+						</td>
+						<td>
+							
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+					<tr class="table-danger">
+						<td>
+							4
+						</td>
+						<td>
+							<img class=""  id=""  src="">
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							04/04/2012
+						</td>
+						<td>
+							Call in to confirm
+						</td>
+						<td>
+							
+						</td>
+						<td>
+							
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+
 			</div>
+			<div class="col-md-2"></div>
+
+			
 		</div>
+
+
+
 
 		<div class="row" style="background-color:#343a40;">
 			<div class="col-md-12">
@@ -132,10 +253,10 @@
 								7天无理由退换货
 							</a>
 						</div>
-						
 
 
-						
+
+
 					</div>
 					<div class="col-md-4">
 						<div class="text-center text-style-my">
@@ -157,18 +278,18 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="text-center text-style-my2">
-							<a class="a-style-my2" href="">关于我们&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</a>	
-							
-							<a class="a-style-my2" href="">帮助中心&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</a>	
-							
-							<a class="a-style-my2" href="">售后服务&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</a>	
-							
-							<a class="a-style-my2" href="">产品资讯&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</a>		
-							
-							<a class="a-style-my2" href="">关于货源</a>	
-							
+							<a class="a-style-my2" href="">关于我们&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</a>    
 
-							
+							<a class="a-style-my2" href="">帮助中心&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</a>    
+
+							<a class="a-style-my2" href="">售后服务&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</a>   
+
+							<a class="a-style-my2" href="">产品资讯&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</a>       
+
+							<a class="a-style-my2" href="">关于货源</a>    
+
+
+
 
 						</div>
 					</div>
@@ -186,18 +307,17 @@
 			</div>
 		</div>
 
+	
+</div>
 
 
 
-
-
-
-	</div>
-
-	<!--***************************************************************-->
+<!--***************************************************************-->
 	<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
 	<script src="../js/jquery.min.js"></script>
 	<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 	<script src="../bootstrap/js/bootstrap.min.js"></script>
+	
+
 </body>
 </html>
