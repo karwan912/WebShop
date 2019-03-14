@@ -63,7 +63,9 @@ ul li{list-style: none;}  /****消除前面的小点*****/
 
 /*****这是Box.html 购物车页*******/
 
-.boxcont{margin: 5rem 0rem 0rem 0rem;}
-.btn-style{height: 1.5rem;width: 1.5rem;}
-.icom-my3{margin: -2rem 0rem 0rem 0rem;}
+.boxcont{margin: 5rem 0rem 10rem 0rem;}
+.img-style{height: 2rem;width: 2rem;}
+.btn-style{height: 2rem;widows: 1rem;}
+.hejistyle{margin: 0rem 0rem 2rem 0rem}
+#heji{font-size: 48px;color: red;}
 
