@@ -58,6 +58,7 @@ ul li{list-style: none;}  /****消除前面的小点*****/
 .imgbig{ height: 18rem; width: 18rem; margin: 0rem 0rem 0rem -3rem; }
 .aboutcon{margin: 0rem 0rem 3rem 0rem;}/*****这是一个容器的css*******/
 .aboutprod{margin: 3rem 0rem 0rem 5rem;}/***这是标题的css*/
+.upfile{margin:1rem 0rem 0rem 0rem;}
 
 
 
@@ -68,4 +69,9 @@ ul li{list-style: none;}  /****消除前面的小点*****/
 .btn-style{height: 2rem;widows: 1rem;}
 .hejistyle{margin: 0rem 0rem 2rem 0rem}
 #heji{font-size: 48px;color: red;}
+
+
+/**********这是个人信息页personal.html********************/
+.img-style2{height:5rem;width:5rem;}
+.divstyle{margin: 2rem 2rem;}
 
