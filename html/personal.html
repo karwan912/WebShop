@@ -79,7 +79,45 @@
 		<div class="row boxcont">
 			<div class="col-md-1"></div>
 			<div class="col-md-5">
-				
+				<form method="post" action="">
+					<div class="divstyle"> 
+						<img  class="rounded-circle img-style2 " id="" src="../img/temp/tyloo.jpg">&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="file" name="更换照片" class="upfile">
+					</div>
+					<div class="divstyle">
+						<div class="input-group mb-3">
+							用户名：  <input type="text" class="form-control" id="username" placeholder="AlimjanYasin" disabled="disabled">
+							<div class="input-group-append">
+								<button class="btn btn-success" type="button" id="username" onclick="changetype();">修改</button>  
+							</div>
+						</div>
+					</div>
+					<div class="divstyle">
+						<div class="input-group mb-3">
+							注册邮箱：  <input type="email" class="form-control" id="useremail" placeholder="A_Yasin@163.com" disabled="disabled">
+							<div class="input-group-append">
+								<button class="btn btn-success" id="useremail" type="button" onclick="changetype();">修改</button>  
+							</div>
+						</div>
+					</div>
+					<div class="divstyle">
+						<div class="input-group mb-3">
+							收货地址：  <input type="text" class="form-control" id="useraddr" placeholder="深圳市南山区深圳大学" disabled="disabled">
+							<div class="input-group-append">
+								<button class="btn btn-success" id="useraddr" type="button" onclick="changetype();">修改</button>  
+							</div>
+						</div>
+					</div>
+					<div class="divstyle">
+						<button class="btn btn-outline-warning" id="">修改登陆/支付密码</button>
+					</div>
+					<div class="divstyle">
+						
+						<input type="submit" name="提交" class="btn btn-outline-success" id="">
+					</div>
+				</form>
 			</div>
 			<div class="col-md-6"></div>
 			
@@ -155,7 +193,7 @@
 	</div>
 
 
-<!--***************************************************************-->
+	<!--***************************************************************-->
 	<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
 	<script src="../js/jquery.min.js"></script>
 	<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
