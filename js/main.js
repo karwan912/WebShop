@@ -109,6 +109,11 @@ function autoload() 　　{ 　　
   }
 
 
+  function changpass(){
+    window.location.href='changepassword.html';
+  }
+
+
   $(document).ready(function(){
    $("#p1").mouseenter(function alim(){
     alert('您的鼠标移到了 id="p1" 的元素上!');
