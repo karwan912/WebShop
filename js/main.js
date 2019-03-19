@@ -108,6 +108,14 @@ function autoload() 　　{ 　　
      
   }
 
+  /**********详细页喜欢功能**************/
+
+function mylike(e){
+  
+       alert("添加喜欢成功");
+       
+}
+
 
   function changpass(){
     window.location.href='changepassword.html';
