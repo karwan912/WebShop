@@ -38,6 +38,7 @@ a:link { text-decoration:none;} /***未访问：蓝色、无下划线  */
 /*****login 页********/
 .img-bg-login{background-size: 100%;background:url(../img/img-web/login-bg.jpg); max-width: 100%;  height: auto;}
 .login-box-style-my{margin: 10rem auto;}
+.img-bg2{background-size: 100%;background:url(../img/img-web/background2.jpg); max-width: 100%;  height: auto;}
 
 
 /*******registered 页**********/
@@ -81,3 +82,7 @@ ul li{list-style: none;}  /****消除前面的小点*****/
 
 .img-style3{height:3.8rem;width:3.8rem;}
 .datestyle{font-size: 12px;}
+
+/**************这是今日新品页*************************/
+.img-style4{height: 15rem;width: 15rem; margin:  3rem 0rem 0rem 5rem;}
+.label1{margin: 1rem  0rem;}
